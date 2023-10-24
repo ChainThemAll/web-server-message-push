@@ -2,36 +2,36 @@
 A message push server written using Rust’s axum framework
 
 todo！
-Core components:
+核心组件:
 
-Message Queue: Create a message queue to manage pushed messages. You can choose to use the built-in queuing system or a third-party message queuing system such as RabbitMQ or Kafka.
-Processor: Design a processor to handle incoming messages, add them to the message queue, and push the messages to the client at the appropriate time.
-Routing: Use Axum’s routing system to define your API’s endpoints and route requests to the correct handler.
-API endpoint:
+消息队列: 创建一个消息队列来管理推送的消息。你可以选择使用内建的队列系统或者第三方的消息队列系统如RabbitMQ或Kafka。
+处理器: 设计处理器来处理传入的消息，将它们添加到消息队列中，并在适当的时间将消息推送到客户端。
+路由: 使用axum的路由系统来定义你的API的端点，并将请求路由到正确的处理器。
+API端点:
 
-Message push: Create an API endpoint to accept messages from clients and add them to the message queue.
-Message Reception: Create an API endpoint to allow clients to receive messages.
-Status Query: Create an API endpoint to allow clients to query the status of the server and/or the status of a specific message.
-Safety:
+消息推送: 创建一个API端点来接受客户端的消息，并将它们添加到消息队列中。
+消息接收: 创建一个API端点以允许客户端接收消息。
+状态查询: 创建一个API端点以允许客户端查询服务器的状态和/或特定消息的状态。
+安全:
 
-Authentication and Authorization: Implement authentication and authorization mechanisms to ensure that only authenticated users can send and receive messages.
-HTTPS: Configure HTTPS to protect data during transmission.
-Input validation: Strict input validation is performed on all incoming requests to avoid security risks such as SQL injection and cross-site scripting.
-Scalability and performance optimization:
+认证和授权: 实现认证和授权机制，以确保只有经过验证的用户可以发送和接收消息。
+HTTPS: 配置HTTPS以保护数据在传输过程中的安全。
+输入验证: 对所有传入的请求进行严格的输入验证，以避免SQL注入、跨站脚本等安全风险。
+可扩展性和性能优化:
 
-Load Balancing: If your service needs to handle a large number of requests, consider using a load balancer to spread the load and increase system availability.
-Caching: Implement caching mechanisms to reduce dependence on external systems or databases and improve service responsiveness.
-Monitoring and logging:
+负载均衡: 如果你的服务需要处理大量的请求，考虑使用负载均衡器来分散负载并提高系统的可用性。
+缓存: 实现缓存机制以减少对外部系统或数据库的依赖，并提高服务的响应速度。
+监控和日志:
 
-Logging: Implement a logging system to facilitate tracking and diagnosing problems.
-Monitoring: Integrate monitoring tools to monitor system performance and health in real time.
-Error handling:
+日志: 实现一个日志系统，以便于跟踪和诊断问题。
+监控: 集成监控工具来实时监控系统的性能和健康状况。
+错误处理:
 
-Error handling: Design a system that catches and handles errors so that when problems arise, they can be diagnosed and fixed quickly.
-test:
+错误处理: 设计一个能够捕获和处理错误的系统，以便在出现问题时能够快速地诊断和修复。
+测试:
 
-Unit and integration testing: Write tests to verify the functionality and performance of your code. Make sure to cover all important paths and edge cases.
-document:
+单元测试和集成测试: 编写测试来验证你的代码的功能和性能。确保覆盖所有的重要路径和边缘情况。
+文档:
 
-API documentation: Write detailed API documentation to help developers understand how to interact with your service.
-Development and Operations Documentation: Write development and operations documentation to ensure the team can effectively maintain and operate the service.
+API文档: 编写详细的API文档，以帮助开发人员了解如何与你的服务交互。
+开发和运维文档: 编写开发和运维文档，以确保团队能够有效地维护和运营服务。
