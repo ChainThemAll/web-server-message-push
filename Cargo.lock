@@ -3,5 +3,25 @@
 version = 3
 
 [[package]]
-name = "message-push"
+name = "error"
+version = "0.1.0"
+
+[[package]]
+name = "log"
+version = "0.1.0"
+
+[[package]]
+name = "safety"
+version = "0.1.0"
+
+[[package]]
+name = "server"
+version = "0.1.0"
+
+[[package]]
+name = "web-core"
+version = "0.1.0"
+
+[[package]]
+name = "web-test"
 version = "0.1.0"
