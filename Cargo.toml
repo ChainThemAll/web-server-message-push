@@ -1,13 +1,14 @@
 [workspace]
 
-members = ["error", "log", "safety", "server", "web-core", "web-test"]
+members = ["error", "log", "server-oso", "safety", "server", "core", "web-test"]
 
 [workspace.dependencies]
 error = { path = "error" }
 log = { path = "log" }
+server-oso = { path = "server-oso" }
 safety = { path = "safety" }
 server = { path = "server" }
-web-core = { path = "web-core" }
+core = { path = "core" }
 web-test = { path = "web-test" }
 
 
@@ -38,3 +39,4 @@ rand = "0.7.3"
 headers = "0.3"
 tower-http = { version = "0.2.0", features = ["fs", "trace"] }
 http = "0.2.1"
+oso = "0.20.0"
